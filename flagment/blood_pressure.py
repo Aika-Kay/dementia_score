@@ -15,7 +15,7 @@ class CalcBloodPressureRisk(object):
         self.dbp = dbp
         self.high_bp = high_bp
 
-    def calc_bp_point(self):
+    def get_bp_point(self):
         if (self.sbp >= 140
                 or self.high_bp == 'ある'):
             bp_point = 1
@@ -24,7 +24,7 @@ class CalcBloodPressureRisk(object):
         return bp_point
 
     def get_bp_signal(self):
-        bp_p = self.calc_bp_point()
+        bp_p = self.get_bp_point()
         if bp_p == 0:
             if (self.sbp < 130
                     or self.dbp < 85):
