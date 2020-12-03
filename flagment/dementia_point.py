@@ -1,4 +1,4 @@
-from flagment.activity import CalcActivityRisk as class_act
+# from flagment.activity import CalcActivityRisk as class_act
 from flagment.birthday import CalcAgeRisk as class_age
 
 user = ['HB00003', '栢森藍佳', '1961', '11', '29', '19611129', '165.4', '88.2', '140', '86', 'ある', '6.7', '140',
@@ -23,6 +23,6 @@ class CalcDementiaScore(object): #param_age=[,,,]
         return dementia_point
 
 
-test = CalcDementiaScore(param_age)
+test = CalcDementiaScore(*param_age)
 dp = test.calc_dementia_score()
 print(dp)
